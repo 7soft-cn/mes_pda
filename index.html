@@ -39,9 +39,6 @@
 				color: #999;
 				float: right;
 			}
-
-
-
 			.btn {
 				background-color: #4d69ed;
 				color: #fff;
@@ -64,18 +61,17 @@
 		<header class="mui-bar mui-bar-nav bgc_main head">
 			<h1 class="mui-title c_white">条码扫描</h1>
 		</header>
-		<footer class="mui-bar mui-bar-footer">
-			<button id='ScanBtn' class="btn">扫描</button>
-		</footer>
+		<!-- <footer class="mui-bar mui-bar-footer">
+			<button id='ScanBtn' class="btn">扫描</button> -->
+			<!-- <input id="txtScan" type="text" class="mui-text-left" placeholder="输入框" />
+		</footer> -->
 		<div class="mui-content">
 			<div style="padding:0 10px;">
 				<div>
 					<span class="scan-title">扫描数据</span>
 					<ul id="scanList" class="scan-list mui-list-unstyled">
-
 					</ul>
 				</div>
-
 			</div>
 		</div>
 		<script src="./js/scanner.js" type="text/javascript" charset="utf-8"></script>
@@ -83,9 +79,9 @@
 		(function() {
 			//连接打印机函数
 			mui.plusReady(function() {
-				mui.toast('ok')
 				//调用蓝牙
 				ScanBarcode.Init();
+				mui.toast('ok')
 			});
 		})();
 	</script>
