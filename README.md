@@ -1,2 +1,3 @@
-# mes_pda
-MES的PDA客户端，适用于有扫描头的安卓机
+# pda_scanner
+适用于有扫描头的PDA
+使用MUI的JS来实现
