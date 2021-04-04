@@ -14,8 +14,7 @@
 			ul {
 				margin: 0;
 			}
-
-
+			
 			.scan-title {
 				color: #787878;
 				line-height: 30px;
@@ -76,12 +75,17 @@
 		</div>
 		<script src="./js/scanner.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
+		function callbackFun(result){
+			console.log('result=>'+result)
+			scanList = document.getElementById("scanList"); //数据列表
+			var li = document.createElement('li');
+			li.setAttribute("data-id", result);
+			li.innerHTML = 'result' + "<span>" + result + "</span>";
+			scanList.appendChild(li);
+		}
 		(function() {
-			//连接打印机函数
 			mui.plusReady(function() {
-				//调用蓝牙
-				ScanBarcode.Init();
-				mui.toast('ok')
+				ScanBarcode.Init(callbackFun);
 			});
 		})();
 	</script>
